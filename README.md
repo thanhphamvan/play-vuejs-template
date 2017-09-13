@@ -1,6 +1,8 @@
-# Play Framework + Vue.js starter
+# Play Framework + Vue.js + TypeScript starter
 
-This is a modern Play Framework + Vue.js (v2) boilerplate that uses Webpack
+## This is currently being developed so beware on using it!
+
+This is a modern Play Framework + Vue.js (v2) + TypeScript boilerplate that uses Webpack
 to load front-end modules and provide **hot reloading**.
 
 In production mode, it has proper 

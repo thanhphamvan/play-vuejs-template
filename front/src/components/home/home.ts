@@ -33,7 +33,7 @@ export class HomeComponent extends Vue {
     {
       name: 'Thanh Pham Van',
       origin: 'k60.hus.edu',
-      position: 'Full-Stack(OverFlow) Developer'
+      position: 'Back-End Developer'
     }
 //    , this.taiTT
   ];
