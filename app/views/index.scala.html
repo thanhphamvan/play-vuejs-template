@@ -1,0 +1,23 @@
+@(env: play.Environment, port: Int, jsBundle: String, cssBundle: String)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend</title>
+    @if(env.isProd) {
+        <link rel="stylesheet" href="/assets/bundle/@cssBundle">
+    }
+</head>
+<body>
+    <div id="app-main">
+        <navbar :inverted="false"></navbar>
+        <router-view>loading...</router-view>
+    </div>
+    @if(env.isDev) {
+        <script src="http://localhost:@port/js/build.js"></script>
+    } else {
+        <script src="/assets/bundle/@jsBundle"></script>
+    }
+</body>
+</html>
