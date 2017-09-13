@@ -1,25 +1,29 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import {ExtendableInfo} from '../ui/ExtendableInfo';
 
 import './home.scss';
 
 interface Dependency {
-  package: string,
-  repo: string,
+  package: string;
+  repo: string;
 }
 
 interface Author {
-  name: string,
-  origin: string,
-  position: string
+  name: string;
+  origin: string;
+  position: string;
 }
 
 @Component({
-  template: require('./home.html')
+  template: require('./home.html'),
+  components: {
+    ExtendableInfo
+  }
 })
 export class HomeComponent extends Vue {
 
-  taitt : Author = {
+  taiTT: Author = {
     name: 'To Tan Tai',
     origin: 'k60.hus.edu',
     position: 'Front-End Developer'
@@ -31,7 +35,7 @@ export class HomeComponent extends Vue {
       origin: 'k60.hus.edu',
       position: 'Full-Stack(OverFlow) Developer'
     }
-    //, this.taitt
+//    , this.taiTT
   ];
 
   main: Dependency = {

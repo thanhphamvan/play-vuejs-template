@@ -24,6 +24,10 @@ let config = {
         loader: 'tslint-loader'
       },
       {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
+      {
         test: /\.ts$/,
         exclude: /node_modules/,
         loader: 'awesome-typescript-loader'

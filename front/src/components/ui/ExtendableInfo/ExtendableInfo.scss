@@ -1,0 +1,92 @@
+@import "../../../sass/main.scss";
+
+$color-green: rgba(0, 204, 102, 0.9);
+
+div.extendable-tab {
+  @extend .container;
+
+  display: block;
+  background-color: rgba(0, 204, 102, 0.5);
+  border-left: 8px solid rgba(0, 204, 102, 0.8);
+  border-radius: 5px;
+  height: 280px;
+}
+
+@mixin extendable-tab-vertical-align-avatar {
+  position: relative;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin extendable-tab-absolute-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+img.extendable-tab-img {
+  width: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  display: block;
+  opacity: 1;
+}
+
+div.extendable-tab-polaroid-middle {
+  transition: .5s ease;
+  opacity: 0;
+  @include extendable-tab-absolute-middle();
+}
+
+div.extendable-tab-polaroid {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //margin-bottom: 25px;
+
+  :hover .extendable-tab-img {
+    opacity: 0.3;
+  }
+
+  :hover .extendable-tab-polaroid-middle {
+    opacity: 1;
+  }
+
+  @include extendable-tab-vertical-align-avatar();
+}
+
+div.extendable-tab-polaroid-in-image-text {
+  background-color: $color-green;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+div.extendable-tab-polaroid-container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+@mixin extendable-tab-content-header {
+  position: relative;
+  left: 28%;
+  transform: translateY(-693%);
+}
+
+h3.extendable-tab-header {
+  display: inline-block;
+  color: white;
+
+  text-shadow: -1px 0 $color-green,
+  0 1px $color-green,
+  1px 0 $color-green,
+  0 -1px $color-green;
+
+  @include extendable-tab-content-header();
+}
