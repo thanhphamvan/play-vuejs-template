@@ -1,9 +1,21 @@
 <div class="container">
-    <div class="row">
-        <div class="content col-md-4">
-            <h1><strong>Thank you for using <span class="text-primary package">{{package}}</span></strong></h1>
-            <p>This project is running in <strong class="mode">{{mode}} mode</strong></p>
-            <p>Make sure to follow the project on <a v-bind:href="repo">GitHub</a> to stay up to date with the latest releases, or contribute to the project by opening an issue or making a pull-request!</p>
-        </div>
+  <div class="row">
+    <div class="content col-md-12">
+      <h1><strong>Website này được xây dựng bằng <span class="text-primary package">{{main.package}}</span></strong>
+      </h1>
+      <p>Website đang hoạt động trong trạng thái: <strong class="main.repo">{{mode}} mode</strong></p>
+      <p>Project đang được hoàn thiện trên <a v-bind:href="main.repo">GitHub</a>.</p>
+      <p v-if="authors.length == 1">
+        Contributor:
+      </p>
+      <p v-else>Contributors:</p>
+      <ul>
+        <li v-for="item in authors">{{item.name}}@{{item.origin}} as <strong>{{item.position}}</strong>.</li>
+      </ul>
+      <p>Project được xây dựng từ các template trên Github gồm: </p>
+      <ul>
+        <li v-for="item in dependencies">{{item.package}} - <a v-bind:href="item.repo">GitHub</a></li>
+      </ul>
     </div>
+  </div>
 </div>
