@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import {ExtendableInfo} from '../ui/ExtendableInfo';
 
 import './home.scss';
 
@@ -16,10 +15,7 @@ interface Author {
 }
 
 @Component({
-  template: require('./home.html'),
-  components: {
-    ExtendableInfo
-  }
+  template: require('./home.html')
 })
 export class HomeComponent extends Vue {
 
