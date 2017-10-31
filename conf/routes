@@ -6,11 +6,14 @@
 GET     /                           controllers.FrontController.index()
 
 # Account
-
++ nocsrf
 POST     /account/signup                    controllers.AccountController.signUp
++ nocsrf
 POST     /account/login                     controllers.AccountController.login
++ nocsrf
 GET      /account/logout                    controllers.AccountController.logOut
-GET      /app/isauthenticated               controllers.AccountController.isAuthenticated
++ nocsrf
+GET      /account/isauthenticated               controllers.AccountController.isAuthenticated
 
 
 # Swagger docs
