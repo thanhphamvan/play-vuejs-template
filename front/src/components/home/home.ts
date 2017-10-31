@@ -35,8 +35,8 @@ export class HomeComponent extends Vue {
   ];
 
   main: Dependency = {
-    package: 'play-scala-vue-typescript-webpack',
-    repo: 'https://github.com/thanhphamvan/play-scala-vue-typescript-webpack'
+    package: 'play-vue',
+    repo: 'https://github.com/thanhphamvan/play-vuejs-template'
   };
 
   dependencies: Dependency[] = [
